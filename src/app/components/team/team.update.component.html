@@ -1,0 +1,44 @@
+<h2>Editar equipo</h2>
+
+<mat-form-field  class="example-form-field" style="margin-left: 20px; width: 90%;">
+    <input matInput type="text" [(ngModel)]="data.name" name="name" placeholder="Nombre del Equipo"   autocomplete="off">
+</mat-form-field><br>
+<div class="row" style="text-align: center;">
+  <div class="col-lg-4">
+    <p >URL</p>
+  </div>
+  <div class="col-lg-4">
+    <mat-slide-toggle  [(ngModel)]="isChecked" ></mat-slide-toggle>
+  </div>
+  <div class="col-lg-3" style="margin-left: 15px; text-align: left;">
+    <p>imagen</p>
+  </div>
+</div>
+
+<mat-form-field  class="example-form-field" style="margin-left: 20px; width: 90%;" *ngIf="isChecked == false">
+    <input matInput type="text" [(ngModel)]="data.image" name="image" placeholder="URL de Imagen"  autocomplete="off">
+</mat-form-field><br>
+
+<div id="sisoi" class="container-input-file" *ngIf="isChecked == true"  >
+  <input id="elInputDeAndre" id="file" type="file" accept="image/png, .jpeg, .jpg, image/gif"  (change)="handleImage($event)">
+  <label id="lblbtn" for="file">
+    <i class="material-icons">add_photo_alternate</i>&nbsp;
+    Subir imagen
+  </label>
+</div>
+
+<div id="prevImg1" style="text-align: center; " class="justify-content-center;">
+    <div id="prevTxt">
+      <p>Previsualización</p>
+    </div>
+    <div id="prevImg" class="justify-content-center;" >
+      <img id="imgCardUp" src="{{data.image}}" alt="" style="width: 157px;">
+    </div>
+</div>
+
+  
+<div class="button" style="text-align: right; margin-top: 15px;">
+    <button mat-stroked-button  (click)="onNoClick()" style="margin-right: 15px;">Cancelar</button>
+    <button mat-stroked-button color="accent" (click)="updateTeam()">Actualizar</button>   
+</div>
+

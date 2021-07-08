@@ -1,0 +1,32 @@
+
+<div [@fadeIn]  style="margin-top: 25px; text-align: center;">
+    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 45px;">LIGAS</h1>
+    <button  mat-fab color="accent" (click)="openDialog()"><span class="material-icons">add</span></button>
+</div>
+<div [@largein]   class="m-0 text-center  row justify-content-center " >
+    <mat-card class="example-card" id="cardP" style="margin-right: 20px;" *ngFor="let league of leagues;">
+        <div>
+            <button  mat-fab  style="background-color: #00a2ff" >
+                <span class="material-icons" (click)="goTeam(league)">people</span>
+            </button>
+            <button  mat-fab style="background-color: #ccc42d;" >
+                <span class="material-icons" (click)="getLeague(league)" (click)="openUpdate()">edit</span>
+            </button>
+              <button  mat-fab color="warn" >
+                <span class="material-icons" (click)="getLeague(league)" (click)="openDelete()">delete</span>
+            </button>
+        </div>
+        <div id="divImgKekw">
+            <img id="imgCard" mat-card-image src="{{league.image}}">
+        </div>
+        <div>
+            <mat-card-content>
+                <mat-card-title id="txtdef">{{league.name}}</mat-card-title>
+            </mat-card-content>
+        </div>
+    </mat-card>  
+</div>
+
+
+ 
+  

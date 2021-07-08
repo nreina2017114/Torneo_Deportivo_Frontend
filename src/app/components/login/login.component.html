@@ -1,0 +1,20 @@
+<div [@fadeIn] class="row justify-content-center">
+    <mat-card style="width: 400px;">
+      <form id="form" class="form-signin" #login="ngForm" (ngSubmit)="onSubmit()"  >
+          <br>
+          <img src="https://steamuserimages-a.akamaihd.net/ugc/280722191113912623/15175D029458715E3E140644641574E3AE611B29/" alt="">
+          <h1>Inicio de sesión</h1>
+            <mat-form-field>
+              <mat-label for="inputUsername">Nombre de Usuario</mat-label>
+              <input type="text" matInput [(ngModel)]="user.username" name="username" id="inputUsername" placeholder="Usuario" autocomplete="off" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label for="inputPassword">Contraseña</mat-label>
+              <input matInput [(ngModel)]="user.password" name="password" type="password" id="inputPassword" placeholder="Contraseña" required>
+            </mat-form-field>
+          <button mat-raised-button color="accent" type="submit" [disabled]="!login.form.valid">Iniciar sesión</button><br>
+      </form>
+  </mat-card>
+  </div>
+  
+  

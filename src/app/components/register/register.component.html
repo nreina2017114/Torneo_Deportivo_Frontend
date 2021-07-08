@@ -1,0 +1,28 @@
+<div [@fadeIn] class=" row justify-content-center align-items-center">
+    <mat-card style="width: 400px;">
+      <form  #register="ngForm" (ngSubmit)="onSubmit(register)">
+          <br>
+          <img src="https://steamuserimages-a.akamaihd.net/ugc/527258867810910446/7F57DE98061D20B5E18094669C177E75581B9D84/" alt="">
+          <h1>Registrar</h1>
+          <mat-form-field style="width: 100%;">
+            <mat-label for="inputUsername">Username</mat-label>
+                <input type="text" matInput  [(ngModel)]="user.username" name="username" #username="ngModel" required autocomplete="off">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+              <mat-label for="inputName">Nombre Completo</mat-label>
+              <input type="text" matInput [(ngModel)]="user.name" name="name" #name="ngModel" required autocomplete="off">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+              <mat-label for="inputPassword">Contraseña</mat-label>
+              <input type="password" matInput  [(ngModel)]="user.password" name="password" #password="ngModel" required autocomplete="off">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+                <mat-label for="inputEmail">Email</mat-label>
+                <input type="text" matInput [(ngModel)]="user.email" name="email" #email="ngModel" required autocomplete="off">
+            </mat-form-field>
+          <button mat-raised-button  [disabled]="!register.form.valid"  color="accent" style="justify-content: center;margin-top: 15px;" type="submit">Registrar</button><br>
+      </form>
+  </mat-card>
+  </div>
+  
+  

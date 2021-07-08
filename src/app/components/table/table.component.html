@@ -1,0 +1,36 @@
+<div  [@fadeIn]  style="margin-top: 25px; text-align: center;">
+    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 45px; margin-bottom: 50px;">
+      Tabla
+    </h1>
+    </div>
+     <!--select jornada --> 
+     <div style="text-align: right;  margin-right: 15vh;">
+        <mat-form-field appearance="fill" style="margin-left: 15px; ">
+            <mat-label>Select an option</mat-label>
+            <mat-select [(value)]="jornadaSelect" >
+              <mat-option *ngFor='let in of counter()  let i = index;' [value]="i"  (click)="listMatch()">Jornada {{i+1}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+     </div>
+      <mat-card class="gradient-border"  style=" margin-top: 5px; background-color: rgb(30, 39, 70); height: 45px; margin-left: 15vh; margin-right: 15vh; ">
+        <div class="row" style="text-align: center;">
+          <div class="col-lg-3" style="text-align: left;"><p>Equipo</p></div>
+          <div class="col-lg-2"><p>A favor</p></div>
+          <div class="col-lg-2"><p>En contra</p></div>
+          <div class="col-lg-2"><p>Diferencia</p></div>
+          <div class="col-lg-2"><p>Partidos</p></div>
+          <div class="col-lg-1"><p>Puntos</p>
+          </div>
+        </div>
+      </mat-card>
+      <mat-card class="gradient-border"  *ngFor="let match of matches | orderbyP: 'value'" style=" margin-top: 5px; background-color: #214358; height: 45px;  margin-left: 15vh; margin-right: 15vh; ">
+        <div class="row" style="text-align: center;">
+          <div class="col-lg-3" style="text-align: left;"><p>{{match.name}}</p></div>
+          <div class="col-lg-2"><p>{{match.goals}}</p></div>
+          <div class="col-lg-2"><p>{{match.goalsf}}</p></div>
+          <div class="col-lg-2">{{match.goals-match.goalsf}}</div>
+          <div class="col-lg-2"><p>{{match.matchCount}}</p></div>
+          <div class="col-lg-1"><p>{{match.value}}</p></div>
+        </div>
+      </mat-card> 
+

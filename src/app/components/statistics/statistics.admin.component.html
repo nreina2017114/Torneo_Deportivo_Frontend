@@ -1,0 +1,31 @@
+
+
+<div [@fadeIn]  style="margin-top: 25px; text-align: center;">
+    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 45px;">ESTADISTICAS GLOBALES</h1>
+</div>
+
+<div [@fadeIn] class="row justify-content-center align-items-center">
+    <div class="text-center">
+        <ngx-charts-bar-horizontal
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="matches"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        [legendTitle]="legendTitle"
+        style="fill: #fff;">
+      </ngx-charts-bar-horizontal>
+    </div>
+</div>
+
+
+   
+
+  
+

@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <button *ngIf="token != null" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="inputSideNav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span style="margin-left: 1vh;">Control Torneo Deportivo</span>
+    <span class="example-spacer"></span>
+    <button *ngIf="token != null" mat-button style="font-size: 15px;"  [matMenuTriggerFor]="menu">
+        <span class="material-icons">person</span>
+        {{user.username}}
+        <span class="material-icons">keyboard_arrow_down</span>
+    </button>
+    <mat-menu #menu="matMenu" xPosition="before" class="custom-class">
+        <button mat-menu-item routerLink="/user">Perfil</button>
+        <button mat-menu-item routerLink="/" (click)="inputSideNav.toggle(false)" (click)="logOut()">Cerrar Sesion</button>
+      </mat-menu>
+</mat-toolbar>

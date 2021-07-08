@@ -1,0 +1,16 @@
+.mat-card{
+    width: 20vh;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 39, 70);
+    border-radius: 10px;
+}
+
+
+
+.mat-form-field {width: 100%;}
+
+::ng-deep .custom-style{
+    background-color:brown;
+    color:white;
+  }

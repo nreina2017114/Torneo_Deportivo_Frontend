@@ -1,0 +1,167 @@
+.example-card {
+    width: 300px;
+    max-height: 330px;
+    margin-top: 15px;
+    
+  }
+  
+  input[type="file"]{
+    display: none;
+  }
+
+  #lblbtn{
+    color:white;
+    height: 40px;
+    width: 250px;
+    background-color: #8164d9;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  #elInputDeAndre{
+    margin-top: 30px;
+    align-items: center;
+    margin-bottom: 380px;
+  }
+
+
+  .example-header-image {
+    background-image: url('https://studio.cults3d.com/4QqRV9kLYYEuw9ur_X3yjQl1sjk=/516x516/https://files.cults3d.com/uploaders/15024335/illustration-file/a86d53e4-2bd9-4a8f-9550-986686c3131a/gi0mAjIh_400x400.png');
+    background-size: cover;
+  }
+
+  #prevImg1{
+    align-items:center;
+  }
+
+  #prevTxt{
+    justify-content:center;
+    align-items:center;
+    display: flex;
+    font-family: "Courier New", Courier, monospace;  
+  }
+
+  #prevImg{
+    padding: 5px;
+    min-width: 90px;
+    min-height: 90px;
+    justify-content:center;
+    align-items:center;
+    max-width: 130px;
+    max-height: 130px;
+    display: flex;
+    margin-left: 110px;
+  }
+
+  #imgCardUp{
+    margin: 15px;
+    min-width: 90px;
+    max-width: 108px;
+    max-height: 108px;
+    justify-content:center;
+    align-items:center;
+  }
+
+
+  #imgCard{
+    margin: 20px;
+    min-width: 150px;
+    max-width: 170px;
+    max-height: 170px;
+  }
+
+  #divImgKekw{
+    margin-inline: 50px;
+    padding: 15px;
+    min-width: 170px;
+    min-height: 170px;
+    justify-content:center;
+    align-items:center;
+    max-width: 170px;
+    max-height: 170px;
+    display: flex;
+  }
+
+  #txtdef{
+    
+    margin-bottom: 10px;
+  }
+
+  .mat-fab{
+    margin: 1vh;
+  }
+
+  .txtleague{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+  }
+ 
+  #div{
+    justify-content:center;
+    align-items:center;
+  }
+
+
+  #cardP{
+    justify-content:center;
+    align-items:center;
+    background-color: rgb(30, 39, 70);
+  }
+
+
+  h2{
+    align-items: center;
+    text-align: center;
+  }
+
+  .button {
+    text-align: center;
+    align-items: center;
+  }
+
+  .mat-accordion, .mat-expansion-panel{
+    background-color: #1c162f;
+  }
+
+  .gradient-border {
+    --borderWidth: 3px;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+

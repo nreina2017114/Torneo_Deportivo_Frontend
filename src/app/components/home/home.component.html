@@ -1,0 +1,32 @@
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  
+  <section id="hero" class="hero d-flex align-items-center" style="color: white;">
+    <div class="container" >
+      <div class="row" >
+        <div class="col-lg-6 d-flex flex-column justify-content-center" id="mid">
+          <h1 data-aos="fade-up" style="font-size: 5vh; color: white;">Proyecto III Bimestre:</h1>
+          <h1 data-aos="fade-up" style="font-size: 3vh; color: white;">Control Torneo Deportivo</h1>
+          <h3 data-aos="fade-up" data-aos-delay="400" style="font-size: 2vh; color: white;"> Consiste en poder llevar el control de un Torneo Deportivo, únicamente Ligas.</h3>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="btns">
+              <a  class=" align-items-center ">
+                <button   (click)="createComponentL()" type="button" id="b1">Iniciar Sesion</button>
+                <button   (click)="createComponentR()" type="button" id="b2">Registrarse</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" id="logs">
+          <div *ngIf="this.imgH=='true'" class="row justify-content-center">
+            <img src="../../../assets/img/omen.png" alt="" style="width: 55vh;">
+          </div>
+          <ng-template #appChangesLR></ng-template>
+        </div>
+      </div>
+    </div>    
+</section>
+</body>

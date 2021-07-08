@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "torneoswebg4": {
+      "hosting": {
+        "UI": [
+          "torneoswebg4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "torneoswebg4"
+  }
+}

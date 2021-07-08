@@ -1,0 +1,38 @@
+<div  [@fadeIn]  style="margin-top: 25px; text-align: center;">
+    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 45px;">
+        USUARIOS
+    </h1>
+    <mat-form-field appearance="fill" style="width: 100vh;">
+        <mat-label>Buscar Usuario</mat-label>
+        <input matInput [(ngModel)]="search" type="search" name="search" placeholder="Usuario" autocomplete="off">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    <button  style="margin-left: 25px;" mat-fab color="accent" (click)="openDialog()"><span class="material-icons">add</span></button>
+</div>
+<div [@largein] class="  row justify-content-center " >
+        <mat-card class="gradient-border"  *ngFor="let user of users | search: search" style="width: 110vh; margin-top: 40px; background-color: rgb(30, 39, 70);"> 
+            <div class="row">
+                <div class="col-lg-2" style="text-align: center;">
+                    <img src="{{user.image}}" alt="" style="width: 100px;">
+                </div>
+                <div class="col-lg-6">
+                    <h2 style="margin-bottom: 0px;">{{user.username}}</h2>
+                    <p style=" margin-bottom: 10px; color: gray; margin-left: 15px;" *ngIf="user.role=='ROLE_ADMIN'">Administrador</p>
+                    <p style=" margin-bottom: 10px; color: gray; margin-left: 15px;" *ngIf="user.role=='ROLE_USER'">Usuario</p>
+                    <p style="margin: 0px;">Nombre: {{user.name}}</p>
+                    <p style="margin: 0px;">Correo Electronico: {{user.email}}</p>
+                </div>
+                <div class="col-lg-4" style="text-align: end;">
+                    <button *ngIf="user.role=='ROLE_USER'" mat-mini-fab style="background-color: #ccc42d; margin-right: 15px;" >
+                        <span class="material-icons"  (click)="getUserSelect(user)" (click)="openUpdate()" >edit</span>
+                    </button>
+                      <button *ngIf="user.role=='ROLE_USER'"  mat-mini-fab color="warn">
+                        <span class="material-icons" (click)="getUserSelect(user)" (click)="openDelete()">delete</span>
+                    </button>
+                </div>
+            </div>
+        </mat-card>
+        <div style="height: 25px;">
+
+        </div>
+</div>

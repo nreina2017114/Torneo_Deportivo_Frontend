@@ -1,0 +1,25 @@
+<div class="sidenav" *ngIf="token != null">
+    <div class="logo">
+        <a href="/" class="simple-text logo-mini">
+            <div class="logo-img">
+                <img src="{{user.image}}" alt="" style="width: 160px;" >
+            </div>
+        </a>
+        <a href="/" class="simple-text logo-normal">
+            <span style="font-size: 18px; text-align: center;">{{user.username}}</span>
+        </a>
+    </div>
+   <mat-action-list>
+        <button mat-list-item routerLink="/administration" *ngIf="user.role =='ROLE_ADMIN'"><span class="material-icons" id="icohome">home</span> Inicio </button>
+        <button mat-list-item *ngIf="user.role =='ROLE_USER'"><span class="material-icons" id="icohome">home</span> Inicio </button>
+        <mat-divider></mat-divider>
+        <button mat-list-item routerLink="/leagues" *ngIf="user.role =='ROLE_ADMIN'"><span class="material-icons" id="icons">sports_esports</span> Ligas </button>
+        <button mat-list-item routerLink="/league" *ngIf="user.role =='ROLE_USER'"><span class="material-icons" id="icons">sports_esports</span> Ligas </button>
+        <button mat-list-item routerLink="/users" *ngIf="user.role =='ROLE_ADMIN'"><span class="material-icons" id="icons">people_outline</span> Usuarios </button>
+        <button mat-list-item routerLink="/statistics" *ngIf="user.role =='ROLE_ADMIN'"><span class="material-icons" id="icons">assessment</span> Estadisticas </button>
+        <button mat-list-item routerLink="/user"><span class="material-icons" id="icohome">person_pin</span> Personal </button>
+        <mat-divider></mat-divider>
+        <button mat-list-item routerLink="/user"><span class="material-icons" id="icons" >manage_accounts</span> Perfil </button>
+        <button mat-list-item routerLink="/" (click)="inputSideNav.toggle(false)" (click)="logOut()"><span class="material-icons" id="icons">login</span> Cerrar Sesión </button>
+    </mat-action-list>
+</div>

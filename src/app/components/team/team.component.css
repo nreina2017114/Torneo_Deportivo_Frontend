@@ -1,0 +1,201 @@
+.gradient-border {
+    --borderWidth: 3px;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+
+
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #281d4a, #8164d9, #58419e, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+
+  #sisoi{
+  }
+
+  input[type="file"]{
+    display: none;
+  }
+
+  #lblbtn{
+    color:white;
+    height: 40px;
+    width: 250px;
+    background-color: #8164d9;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  #elInputDeAndre{
+    margin-top: 30px;
+    align-items: center;
+    margin-bottom: 380px;
+  }
+
+
+  #cardTeamImg{
+    width: 80px;
+    max-height:80px;
+  }
+/*
+  input {
+    width: 100%;
+  }*/
+
+
+  
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+
+
+.ng-select.custom .ng-select-container  {            
+    color: white;
+}
+  
+.ng-option.custom .ng-option-container  {            
+    min-height: 0px;
+    border-radius: 0;
+    color: white;
+    background-color: black;
+}
+
+
+#style-2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+
+#divKEKWTeamsGeneral{
+    justify-items: center;
+    align-items: center;
+    justify-items: center;
+}
+
+#divKEKWTeams{
+    justify-items: center;
+    align-items: center;
+    justify-items: center;
+    display: inline-block;
+}
+
+#cardTeams{
+    width: 610px;
+    margin-top: 20px;
+    padding: 10px;
+    min-height: 105px;
+}
+
+#prevTxt{
+    justify-content:center;
+    align-items:center;
+    display: flex;
+    font-family: "Courier New", Courier, monospace;  
+    margin-top: 10px;
+  }
+
+#btnMarker{
+    width: 300px;
+    height: 35px;
+    align-items: center;
+    text-align: center;
+    background-color:#7CB7AF;
+    border-radius: 5px;
+}
+
+#btnDiv{
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#jornadaSelect{
+    align-items: center;
+    text-align: center;
+}
+
+#titlemarker{
+    align-items: center;
+    text-align: center;
+    font-size: 19px;
+    color: mintcream;
+    padding: 10px;
+}
+
+
+#prevImg1{
+    align-items:center;
+  }
+
+
+#prevTxt{
+    justify-content:center;
+    align-items:center;
+    display: flex;
+    font-family: "Courier New", Courier, monospace;  
+  }
+
+  #prevImg{
+    padding: 15px;
+    min-width: 90px;
+    min-height: 90px;
+    justify-content:center;
+    align-items:center;
+    max-width: 105px;
+    max-height: 105px;
+    display: flex;
+    margin-left: 125px;
+  }
+
+  #imgCardUp{
+    margin: 20px;
+    min-width: 90px;
+    max-width: 105px;
+    max-height: 105px;
+    justify-content:center;
+    align-items:center;
+  }
+

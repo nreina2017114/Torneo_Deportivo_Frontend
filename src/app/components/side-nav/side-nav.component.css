@@ -1,0 +1,36 @@
+.sidenav {
+    background: rgb(30, 39, 70);
+    height: 100%;
+    width: 230px;
+}
+
+.logo .simple-text{
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    display: block;
+    white-space: nowrap;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 30px;
+    overflow: hidden;
+    text-align: center;
+
+
+}
+
+.logo-img img{width: 150px;
+    height: auto;
+    align-items: center;
+
+    height: auto;
+    margin-top: 3vh;
+    
+}
+
+#icons{
+    margin-right: 20px;
+    margin-left: 35px;
+}
+#icohome{
+    margin-right: 20px;
+}

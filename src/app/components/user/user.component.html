@@ -1,0 +1,52 @@
+<div [@fadeIn] class="row justify-content-center" this.edit='true'>
+    <mat-card class="gradient-border" id="cardP" >
+      <form class="form-signin" #updateUser="ngForm" (ngSubmit)="update()">
+      <mat-card-header>
+        <mat-card-title style="font-size: 25px; margin-top: 25px; margin-bottom: 25px;" *ngIf="this.edit==false">
+            Perfil
+        </mat-card-title>
+        <mat-card-title style="font-size: 25px;  margin-top: 25px; margin-bottom: 25px;" *ngIf="this.edit==true" >
+            Editando Perfil
+        </mat-card-title>
+    </mat-card-header>
+    <div class="row">
+        <div class="col-lg-6" style="text-align: center;">
+            <img  *ngIf="user.image" id="imgUser" src="{{user.image}}" alt="user image" style="width: 200px;">
+            <div style="margin-top: 15px;">
+              <button *ngIf="this.edit==true" type="button" mat-raised-button color="warn"  style="background: #4e42f5;" (click)="editarbtn()" (click)="openDialog()">Cambiar avatar</button>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <mat-card-content>
+                <h5 style="font: bold;">Nombre</h5>
+                <mat-form-field *ngIf="this.edit==true" class="example-form-field" style="margin-left: 20px; width: 90%;">
+                    <input matInput type="text" [(ngModel)]="user.name" name="name"  autocomplete="off">
+                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''" >
+                      <mat-icon>close</mat-icon>
+                    </button>
+                  </mat-form-field>
+                <h3 style="margin-left: 20px;" *ngIf="this.edit==false">{{user.name}}</h3>
+                <h5>Username</h5>
+                <mat-form-field *ngIf="this.edit==true"  class="example-form-field" style="margin-left: 20px; width: 90%;">
+                    <input matInput type="text" [(ngModel)]="user.username" name="username" #username="ngModel" autocomplete="off">
+                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                  </mat-form-field>
+                <h3 style="margin-left: 20px;" *ngIf="this.edit==false">{{user.username}}</h3>
+                <h5>Email</h5>
+                <h3 style="margin-left: 20px;">{{user.email}}</h3>
+                
+
+            </mat-card-content>
+        </div>
+    </div>
+    <mat-card-actions style="text-align: right; margin-bottom: 15px; margin-right: 15px;">
+        <button *ngIf="this.edit==false" mat-raised-button color="primary" (click)="editarbtn()" >Actualizar Cuenta</button>
+        <button *ngIf="this.edit==true" mat-raised-button color="accent" [disabled]="!updateUser.form.valid">Confirmar</button>
+        <button *ngIf="this.edit==false" mat-raised-button color="warn" (click)="openDialog2()" type="button">Eliminar Cuenta</button>
+        <button *ngIf="this.edit==true" mat-raised-button color="warn" (click)="canceledit()">Cancelar Acualización</button>
+    </mat-card-actions>
+  </form>
+    </mat-card>
+  </div>

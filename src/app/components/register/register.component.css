@@ -1,0 +1,13 @@
+.mat-card{
+    width: 45vh;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 39, 70);
+    border-radius: 10px;
+}
+
+
+.login{
+    display: -ms-flexbox;
+    margin-top: 500px;
+}

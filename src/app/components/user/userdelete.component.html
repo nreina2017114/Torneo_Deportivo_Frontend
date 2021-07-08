@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-lg-10">
+        <h1 style="color: red;">Eliminar Cuenta: {{user.username}}</h1>
+        <h2>¿Esta seguro que desea eliminar permanetemente su cuenta?</h2>
+        <h3>Esciba su contraseña para continuar</h3>
+    </div>
+    <div class="col-lg-2" >
+        <img style="width: 100px;" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/972e3c28-c31f-494e-8740-0752a7bef217/ddx95g0-7d5513aa-aeef-4702-b3bb-fc98622f7c3f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk3MmUzYzI4LWMzMWYtNDk0ZS04NzQwLTA3NTJhN2JlZjIxN1wvZGR4OTVnMC03ZDU1MTNhYS1hZWVmLTQ3MDItYjNiYi1mYzk4NjIyZjdjM2YuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.A2_Lp5IbnFtfhPMsvu_llY2NYkXPFjeA06I0TxJRQM8" alt="">
+    </div>
+</div>
+<form #formRemoved="ngForm">
+    <mat-form-field  class="example-form-field" style="margin-left: 20px; width: 90%;">
+        <input matInput type="text" [(ngModel)]="possiblePass" type="password" id="passwordRemoved" name="passwordRemoved" autocomplete="off">
+      </mat-form-field>
+</form>
+<div style="text-align: end; margin-top: 15px; margin-right: 15px;">
+    <button mat-stroked-button (click)="onNoClick()" >cancelar</button>
+    <button style="margin-left: 10px;" mat-stroked-button color="warn" type="button" [disabled]="!formRemoved.form.valid" (click)="deleteAccount()">Confirmar</button>
+
+</div>

@@ -1,0 +1,52 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css';
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+
+html, body { height: 100%; }
+
+
+body{
+  /*  background-image: url("https://i.imgur.com/lLfM33a.gif");*/
+    background-image: url(../assets/img/fondo.gif);
+ 
+    /*background-image: url("https://64.media.tumblr.com/896b21ac5f8ad4b46cfac9a216b0657a/tumblr_ogqsxoRtme1rldv4go1_1280.gifv");*/
+    /*background-image: url("https://64.media.tumblr.com/785d2a9fcde0637d6f092439e5a5b042/tumblr_oqgsdx2GPF1rldv4go1_1280.gifv");*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+.example-container, .mat-drawer  {
+    background-color: transparent;
+    height:93vh;
+  }
+  mat-dialog-container{
+    background-color: #1c162f !important;
+ }
+
+ 
+/* width */
+::-webkit-scrollbar {
+  width:7px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 2px grey; 
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #230140
+}

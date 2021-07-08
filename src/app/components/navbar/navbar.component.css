@@ -1,0 +1,13 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-toolbar{
+      height: 7vh;
+      background-color: #1c162f;
+  }
+
+  ::ng-deep .custom-class {
+    background-color: rgb(30, 39, 70)!important;
+  }
+

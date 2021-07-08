@@ -1,0 +1,43 @@
+
+<!--select jornada --> 
+
+<div>
+  <STYLE>a {text-decoration: none;} </STYLE> 
+  <div id="titlemarker">SELECCIÓN DE RESULTADOS</div>
+  
+  <mat-form-field id="jornadaSelect" appearance="fill">
+    <mat-label>Seleccionar Jornada</mat-label>
+    <mat-select [(value)]="jornadaSelect">
+      <mat-option *ngFor='let in of counter()  let i = index;' [value]="i" >Jornada {{i+1}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <mat-form-field appearance="fill">
+        <mat-label>Seleccionar equipo</mat-label>
+        <mat-select [(value)]="selected1">
+          <mat-option *ngFor="let team of teams | slice:1; let i = index;" [value]="team._id" >{{team.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-ripple-form-field">
+        <input matInput [(ngModel)]="goals1" type="number" placeholder="No. de Mapas" autocomplete="off">
+      </mat-form-field>
+    </div>
+    <div class="col-lg-6">
+      <mat-form-field appearance="fill">
+        <mat-label>Seleccionar equipo</mat-label>
+        <mat-select [(value)]="selected2">
+          <mat-option *ngFor="let team of teams | slice:1; " [value]="team._id" >{{team.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-ripple-form-field">
+        <input matInput [(ngModel)]="goals2" type="number" placeholder="No. de Mapas" autocomplete="off">
+      </mat-form-field>
+    </div>
+    <div id="btnDiv">
+      <button mat-stroked-button color="accent" (click)="getteamWin()">Actualizar resultados</button>
+    </div>
+  </div>
+
+</div>
